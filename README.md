@@ -56,8 +56,9 @@ Using two machines keeps things like a real setup: the server runs services, and
 | ------- | ------------ | ------ | ---- |
 | **Syncthing** | Syncs files between both machines, with no cloud involved | Working | [`projects/syncthing`](./projects/syncthing) |
 | **Jellyfin** | Media server on Fedora, watched from the workstation's browser | Working | [`projects/jellyfin`](./projects/jellyfin) |
+| **Network & Pi-hole** | Fixed IPs via DHCP reservation, network-wide DNS ad blocking | Working | [`projects/network-pihole`](./projects/network-pihole) |
 
-Each project folder also has a `troubleshooting.md` for problems I hit and how I fixed them.
+The Syncthing and Jellyfin folders also have a `troubleshooting.md` for problems I hit and how I fixed them.
 
 ## Remote access (Tailscale)
 
@@ -68,7 +69,7 @@ To reach the server from outside the home network without opening ports on the r
 3. Check the connection with `tailscale status`.
 4. Connect over the tailnet, for example with SSH.
 
-Access rules (ACLs and tags) are managed in the Tailscale admin console. For safety, this repository never publishes IP addresses, hostnames, or auth keys.
+Access rules (ACLs and tags) are managed in the Tailscale admin console. For safety, this repository never publishes public IP addresses, Tailscale addresses, or auth keys.
 
 ## How I approach each project
 
@@ -98,8 +99,11 @@ homelab/
 └── projects/
     ├── syncthing/
     │   └── troubleshooting.md
-    └── jellyfin/
-        └── troubleshooting.md
+    ├── jellyfin/
+    │   └── troubleshooting.md
+    └── network-pihole/
+        ├── README.md
+        └── network-pihole-setup.md
 ```
 
 ---
