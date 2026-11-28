@@ -57,6 +57,7 @@ Using two machines keeps things like a real setup: the server runs services, and
 | **Syncthing** | Syncs files between both machines, with no cloud involved | Working | [`projects/syncthing`](./projects/syncthing) |
 | **Jellyfin** | Media server on Fedora, watched from the workstation's browser | Working | [`projects/jellyfin`](./projects/jellyfin) |
 | **Network & Pi-hole** | Fixed IPs via DHCP reservation, network-wide DNS ad blocking | Working | [`projects/network-pihole`](./projects/network-pihole) |
+| **Uptime Kuma** | First Docker container: dashboard that checks Jellyfin and Pi-hole every minute | Running, tests still to do | [`projects/uptime-kuma`](./projects/uptime-kuma) |
 
 The Syncthing and Jellyfin folders also have a `troubleshooting.md` for problems I hit and how I fixed them.
 
@@ -101,9 +102,13 @@ homelab/
     │   └── troubleshooting.md
     ├── jellyfin/
     │   └── troubleshooting.md
-    └── network-pihole/
+    ├── network-pihole/
+    │   ├── README.md
+    │   └── network-pihole-setup.md
+    └── uptime-kuma/
         ├── README.md
-        └── network-pihole-setup.md
+        ├── docker-basics-setup.md
+        └── screenshots/
 ```
 
 ---
